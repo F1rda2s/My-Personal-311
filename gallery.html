@@ -1,0 +1,198 @@
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+<div>
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+</style>
+<body background="gambar keluarga\bata.jpg">
+
+<div>
+<table align="center">
+<tr>
+<td><a href="index.html" target="_blank"><img src="gambar keluarga\home.png"></a></td>
+<td><a href="biodata.html" target="_blank"><img src="gambar keluarga\bio.png"></a></td>
+<td><a href="experience.html" target="_blank"><img src="gambar keluarga\exp.png"></a></td>
+<td><a href="education.html" target="_blank"><img src="gambar keluarga\edu.png"></a></td>
+<td><a href="family.html" target="_blank"><img src="gambar keluarga\fam.png"></a><td>
+<td><a href="gallery.html" target="_blank"><img src="gambar keluarga\gale.png"></a></td>
+</tr>
+</table>
+</div>
+<h2 style="text-align:center"><font color="white">Slideshow Gallery</h2>
+
+<div class="container">
+  <div class="mySlides">
+    <center><img src="gambar keluarga\parent.jpg" style="width:50%">
+<center><figcaption>My Parent</figcaption>
+  </div>
+
+  <div class="mySlides">
+    <center><img src="gambar keluarga\p.jpg" style="width:50%">
+<center><figcaption>With My Family During Send Me to UiTM</figcaption>
+  </div>
+
+  <div class="mySlides">
+    <center><img src="gambar keluarga\mfls.jpg" style="width:50%">
+<center><figcaption>In the<i> Malaysia Future Leader School Program </i></figcaption>
+  </div>
+    
+  <div class="mySlides">
+    <center><img src="gambar keluarga\gmgf.jpg" style="width:50%">
+<center><figcaption>My Grandfather and My Grandmother</figcaption>
+  </div>
+
+  <div class="mySlides">
+    <center><img src="gambar keluarga\mersing.jpg" style="width:50%">
+<center><figcaption>My Hometown <i>Mersing Johor</i></figcaption>
+  </div>
+    
+  <div class="mySlides">
+    <center><img src="gambar keluarga\hill.jpg" style="width:50%">
+<center><figcaption>During Family Day at <i>Gunung Reng,Jeli</i></i></figcaption>
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+<br>
+<table align="center">
+<tr bgcolor="black">
+<td><b><font color="white">MY PERSONAL VIDEO</td>
+</tr>
+</table>
+<center><video width="320" height="240" autoplay>
+  <source src="self\self.mp4" type="video/mp4">
+  <source src="self\self.mp4" type="video/mp4">
+</video>
+<table align="center">
+<tr bgcolor="black">
+<td><figcaption><font color="white">To play this video right click and choose <i> show all control</i></figcaption></td>
+ </tr>
+</table>   
+</body>
+</html>
